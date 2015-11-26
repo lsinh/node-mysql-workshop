@@ -15,7 +15,7 @@ var connection = mysql.createConnection({
   database: 'addressbook'
 });
 
-connection.query("select Account.id, Account.email from Account join AddressBook on Account.id=AddressBook.accountId where AddressBook.id between 1 and 6", 
+connection.query("select id, email from Account where id between 1 and 5", 
 function(err, results) {
 	
 	

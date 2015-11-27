@@ -54,18 +54,26 @@ connection.query('select Account.id, Account.email, AddressBook.name from Accoun
                 newAccounts.push(createAccount);
                 
             }
-                else {
+                else { 
                     newAccounts[index].names.push(row.name);
     
             
-            
+    
             }
+            
+                
             
         })
          newAccounts.forEach(function(account){
         console.log(account.id+ '. '+ account.email);
         account.names.forEach(function(book) {
+            if (book === null) {
+            console.log('   no address book');                
+            }
+            else {
             console.log('    ' + book);
+            }
+            
         })
     })
        

@@ -68,6 +68,8 @@ connection.query('select Account.id, Account.email, AddressBook.name from Accoun
         console.log(account.id+ '. '+ account.email);
         account.names.forEach(function(book) {
             if (book === null) {
+            
+            //this will replace null within acountID that has NO adressbook with no address book
             console.log('   no address book');                
             }
             else {
